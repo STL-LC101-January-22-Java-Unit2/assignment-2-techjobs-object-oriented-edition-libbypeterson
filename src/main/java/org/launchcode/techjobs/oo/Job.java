@@ -29,6 +29,29 @@ public class Job {
 
     @Override
     public String toString() {
+        if (this.getName() == null || this.getName().equals("")) {
+            this.setName("Data not available");
+        }
+
+        if (this.getEmployer() == null || Objects.equals(this.getEmployer().toString(), "")) {
+            Employer noEmployer = new Employer("Data not available");
+            this.setEmployer(noEmployer);
+        }
+
+        if (this.getLocation() == null || Objects.equals(this.getLocation().toString(), "")) {
+            Location noLocation = new Location("Data not available");
+            this.setLocation(noLocation);
+        }
+
+        if (this.getPositionType() == null || Objects.equals(this.getPositionType().toString(), "")) {
+            PositionType noPositionType = new PositionType("Data not available");
+            this.setPositionType(noPositionType);
+        }
+
+        if (this.getCoreCompetency() == null || Objects.equals(this.getCoreCompetency().toString(), "")) {
+            CoreCompetency noCoreCompetency = new CoreCompetency("Data not available");
+            this.setCoreCompetency(noCoreCompetency);
+        }
         return "\n" +
                 "ID: " + id +
                 "\nName: " + name +

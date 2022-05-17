@@ -64,29 +64,6 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField() {
         Job job1 = new Job();
-        if (job1.getName() == null || job1.getName() == "") {
-            job1.setName("Data not available");
-        }
-
-        if (job1.getEmployer() == null) {
-           Employer noEmployer = new Employer("Data not available");
-           job1.setEmployer(noEmployer);
-        }
-
-        if (job1.getLocation() == null) {
-            Location noLocation = new Location("Data not available");
-            job1.setLocation(noLocation);
-        }
-
-        if (job1.getPositionType() == null) {
-            PositionType noPositionType = new PositionType("Data not available");
-            job1.setPositionType(noPositionType);
-        }
-
-        if (job1.getCoreCompetency() == null) {
-            CoreCompetency noCoreCompetency = new CoreCompetency("Data not available");
-            job1.setCoreCompetency(noCoreCompetency);
-        }
 
         assertEquals("\n" + "ID: " + job1.getId() + "\n" + "Name: Data not available\n" +
                 "Employer: Data not available\n" + "Location: Data not available\n" +
